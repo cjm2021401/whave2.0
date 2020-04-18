@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <title>WHAVE</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="https://unpkg.com/video.js/dist/video-js.css">
+    <link rel="stylesheet" href="css/whave.css">
+    <style>
+    body
+    {
+
+        background-color: #F5F0E3;
+
+    }
+
+    .box {
+        height: 80px;
+        text-align:center;
+    }
+    .middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #40BFC1">
+  <a class="navbar-brand" href="index.html"><img src="https://i.ibb.co/TTmHW8N/home.png" width="40" height="40" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+      
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">팁</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+
+<div class="text-center" style="position: relative;  top: 0px;"><a href="index.html">
+    <data type="button">
+
+        <img src="images/그림9.png" alt="다음페이지로" width="200" height="95"/>
+    </data>
+</div>
+    <div id="carousel-example" class="carousel slide" style="top: 10px" data-interval="false">
+        <ol id="v-list" class="carousel-indicators">
+        <!--<li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example" data-slide-to="1"></li>
+            <li data-target="#carousel-example" data-slide-to="2"></li>-->
+        </ol>
+        <div id="v-item" class="carousel-inner">
+           <!-- <div class="carousel-item active">
+                <video-js id=example-video class="embed-responsive embed-responsive-16by9 vjs-default-skin vjs-big-play-centered" data-setup='{"fluid": true}' controls>
+                    <source src="rtmp://wj.khunet.net/stream/asdfg.m3u8" type="application/x-mpegURL">
+                </video-js>
+                <div class="carousel-caption">
+                    <div class="animated fadeInDown">
+                        <h4 class="h4-responsive">Room 1</h4>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev" style="height:30px;position:absolute;top:45%">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next" style="height:30px;position:absolute;top:45%">
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        
+    </div>
+    <div class="text-center" style="position: relative; top: 70px;">
+    <ol id="no-video" >  
+  
+  </ol>
+
+        <div class="box middle">
+            <button type="button" class="btn btn-info btn-lg btn-lg" data-toggle="modal" data-target="#addcamera">
+            카메라 추가
+            </button>
+        </div>
+
+        <div class="box middle" >
+            <button type="button"  class="btn btn-info btn-lg btn-lg"  data-toggle="modal" data-target="#viewcamera">
+                카메라 관리
+            </button>
+        </div>
+        <div class="box middle">
+            <button type="button" class="btn btn-info btn-lg btn-lg" data-toggle="modal" data-target="#help">
+                카메라 도움말
+            </button>
+        </div>
+
+
+</div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">TIP</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>영상이 재생이 원활하지 못할경우 새로고침을 하면됩니다.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="modal fade"  id="addcamera" tabindex="-1" role="dialog" aria-labelledby="addcameraLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="addcameraLabel">카메라 추가</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+
+                   <form name="myForm" onsubmit="return createItem()" method="post">
+                       <div class="modal-body">
+                       <div class="form-group">
+                           <label for="formGroupExampleInput">닉네임</label>
+                           <input type="text" name="fname" class="form-control" id="formGroupExampleInput" placeholder="EX)거실용 카메라">
+
+                       </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                          <input type="submit" value="카메라 생성" class="btn btn-primary">
+
+                       </div>
+                   </form>
+
+
+           </div>
+       </div>
+   </div>
+
+
+   <div class="modal fade" id="viewcamera" tabindex="-1" role="dialog" aria-labelledby="viewcameraLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="viewcameraLabel">카메라관리</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body" >
+                   <div class="container">
+                   <table class="table table-striped" >
+                       <thead>
+                       <tr>
+                           <td>StreamName</td>
+                           <td>Nickname</td>
+                           <td>Option</td>
+                       </tr>
+                       </thead>
+                        <tbody id="result">
+
+                        </tbody>
+                   </table>
+
+                   </div>
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-primary" onclick="clearAll()">전체 삭제</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="helpLongTitle" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title" id="helpLongTitle">GUIDE</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <!--Carousel Wrapper-->
+                   <div id="carousel-example-2" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
+                       <!--Indicators-->
+                       <ol class="carousel-indicators">
+                           <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                           <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                           <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                       </ol>
+                       <!--/.Indicators-->
+                       <!--Slides-->
+                       <div class="carousel-inner" role="listbox">
+                           <div class="carousel-item active">
+                               <div class="view">
+                                   <img class="d-block w-100" src="https://i.ibb.co/Y8j0Sc6/app.jpg"
+                                        alt="First slide">
+                                   <div class="mask rgba-black-light"></div>
+                               </div>
+                               <div class>
+                                   <h3 class="h4-responsive">준비</h3>
+                                   <p>폐스마트폰에  whave를 설치해준후 구글계정으로 로그인 후 카메라와 장소를 <br>추가해준다</p>
+                               </div>
+                           </div>
+                           <div class="carousel-item">
+                               <!--Mask color-->
+                               <div class="view">
+                                   <img class="d-block w-100" src="https://i.ibb.co/B3mVLtz/web.jpg"
+                                        alt="Second slide">
+                                   <div class="mask rgba-black-strong"></div>
+                               </div>
+                               <div class>
+                                   <h3 class="h4-responsive">실행</h3>
+                                   <p>웨일을 실행시켜 열결시켜둔 구글 계정으로 로그인한다</p>
+                               </div>
+                           </div>
+                           <div class="carousel-item">
+                               <!--Mask color-->
+                               <div class="view">
+                                   <img class="d-block w-100" src="https://i.ibb.co/MfLDFG4/cctv.jpg"
+                                        alt="Third slide">
+                                   <div class="mask rgba-black-slight"></div>
+                               </div>
+                               <div class>
+                                   <h3 class="h4-responsive">스트리밍</h3>
+                                   <p>실시간으로 넘어오는 화면을 확인 할 수 있다. 또한 여러개의 영상을 볼수있고, 전체화면, 화면끌어다 놓기기능도 지원</p>
+                               </div>
+                           </div>
+                       </div>
+                       <!--/.Slides-->
+                       <!--Controls-->
+                       <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                           <span class="sr-only">Previous</span>
+                       </a>
+                       <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                           <span class="sr-only">Next</span>
+                       </a>
+                       <!--/.Controls-->
+                   </div>
+                   <!--/.Carousel Wrapper-->
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+               </div>
+           </div>
+       </div>
+   </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/firebase-app.js"></script>
+    <script src="js/firebase-auth.js"></script>
+    <script src="js/firebase-firestore.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/videojs-http-streaming.js"></script>
+    <script src="js/script.js"></script>
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script language=javascript>
+
+       function createItem() {
+           var nickname = document.forms["myForm"]["fname"].value;
+           if (nickname == "") {
+               alert("카메라 이름을 입력하세요");
+               return false;
+           }
+
+           for (var i = 0; i < localStorage.length; i++) {
+               var key = localStorage.key(i);
+               var value = localStorage.getItem(key);
+            if(value==nickname)
+            {
+                alert("중복된 카메라 이름이 있습니다. \n다른 카메라 이름을 입력하여 주세요.");
+                return false;
+            }
+
+           }
+
+           var timestamp = Date.now();
+           localStorage.setItem(timestamp, nickname);
+
+           alert("StreamName은" + timestamp+"\n NickName은 "+nickname+"로 카메라생성이 완료되었습니다");
+           //window.location.reload();
+       }
+
+
+       function clearAll() {
+           var len=localStorage.length;
+           if(len==0)
+           {
+               alert("현재존재 하는 카메라가 없습니다.");
+
+           }
+           localStorage.clear();
+           alert("삭제가 완료되었습니다.");
+           window.location.reload();
+
+
+
+       }
+
+       function clearOne(idx){
+
+
+           var arr = Array.from(idx.cells);
+           var key = arr[0].innerHTML;
+           localStorage.removeItem(key);
+           alert("삭제가 완료되었습니다.");
+           window.location.reload();
+       }
+       var hst = document.getElementById("result");
+       var len=localStorage.length;
+       if(len==0)
+       {
+           hst.innerHTML += "<tr><td>" + "no camera" + "</td><td>" + "no camera"+ "</td><td>"+"no camera";
+       }
+       else{
+       for (var i = 0; i < localStorage.length; i++) {
+           // set iteration key name
+           var key = localStorage.key(i);
+           // use key name to retrieve the corresponding value
+           var value = localStorage.getItem(key);
+
+           hst.innerHTML += "<tr><td>" + key + "</td><td>" + value + "</td><td><button onClick = clearOne(this.parentNode.parentNode)>삭제</button></td></tr>";
+       }}
+
+      if(localStorage.length!=0) {
+           var cam_no = 0;
+           var cam_active = 'active';
+
+           for (var j = 0; j < localStorage.length; j++) {
+               var ke=localStorage.key(j);
+               var name=localStorage.getItem(ke);
+               $('#v-list').append(`<li data-target="#carousel-example" data-slide-to="${j}" class="${cam_active}"></li>`);
+               $('#v-item').append(`<div class="carousel-item ${cam_active}">
+                    <video-js id="video-${j}" class="embed-responsive embed-responsive-16by9 vjs-default-skin vjs-big-play-centered" data-setup='{"fluid": true}' controls>
+                        <source src="http://wj.khunet.net/live/${ke}.m3u8" type="application/x-mpegURL">
+                    </video-js>
+
+                    <div class="carousel-caption">
+                        <div class="animated fadeInDown">
+                            <h4 class="h4-responsive">${name}</h4>
+                        </div>
+                    </div>
+                </div>`);
+               videojs(`video-${cam_no}`, {}, function() { this.reload(); });
+               cam_active = '';
+               cam_no++;
+           }
+
+
+
+
+           if(cam_no==0)
+           {
+               $("#no-video").prepend('<div class="text-center"><h3 class="display-5"style="color: #ffffff">No Video Available</h3></div>');
+               $("#no-video").prepend('<div class="text-center"><img class="mb-4" src="https://i.ibb.co/pwcXqXT/image.png" alt="" width="250" height="250"></div>');
+               console.log('No Document');
+           }
+
+       } else {
+           // 여기는 그냥 카메라가 없다.
+
+           $("#no-video").prepend('<div class="text-center"><h3 class="display-5"style="color: #ffffff">No Video Available</h3></div>');
+           $("#no-video").prepend('<div class="text-center" style="position: relative;"><img class="mb-4" src="images/눈물웨일.png" alt="" width="250" height="250"></div>');
+           console.log('No Document');
+       }
+
+   </script>
+
+</body>
+</html>

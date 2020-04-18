@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{
+	font-family: "Nanum Gothic";
+}
+a{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover{
+	color: #bbbbbb;
+	text-decoration:  none;
+	cursor : pointer;
+}
+
+.navbar-default{
+	background-color:#2fe9a7;
+	border-color: #2fe9a7;
+}
+
+
+.ex .arrow_top img {position:relative; -webkit-animation: myfirst 0.7s linear 1s infinite alternate; /*normal;  Chrome, Safari, Opera */ animation: myfirst 0.7s linear 1s infinite alternate; /*normal;  Standard syntax */}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+	0%   {opacity: 1.0; top:20px;}
+	100% {opacity: 1.0; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+	0%   {opacity: 1.0; top:20px;}
+	100% {opacity: 1.0; top:0px;}
+}

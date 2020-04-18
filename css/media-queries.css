@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+ 
+    /* ... */
+ 
+    .top-content .carousel-control-prev, 
+    .top-content .carousel-control-next { display: none; }
+    .top-content .carousel-indicators li { margin-left: 10px; margin-right: 10px; }
+ 
+    /* ... */
+ 
+}

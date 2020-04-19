@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9de6c3c0-2081-474b-86c9-2e6ec044a478" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/whave.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/whave.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Android_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Android_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Android_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/iOS_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/iOS_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/관리.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/그림9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/생성.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/안드로이드.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/애플.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/연결.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +70,7 @@
       <workItem from="1586957993851" duration="18000" />
       <workItem from="1587006362521" duration="919000" />
       <workItem from="1587223098377" duration="4529000" />
-      <workItem from="1587230773476" duration="5876000" />
+      <workItem from="1587230773476" duration="17551000" />
     </task>
     <servers />
   </component>

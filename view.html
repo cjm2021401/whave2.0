@@ -42,7 +42,10 @@
 
         <img src="https://raw.githubusercontent.com/cjm2021401/whave2.0/master/images/그림9.png" alt="홈으로" width="200" height="95"/>
     </data>
+</a>
 </div>
+
+
     <div id="carousel-example" class="carousel slide" style="top: 10px" data-interval="false">
         <ol id="v-list" class="carousel-indicators">
 
@@ -83,7 +86,7 @@
 
 
 </div>
-
+<div class="text-center" style="position: fixed; bottom: 0; width: 100%">      <p>TIP 재생이 안될 시 하단의 새로고침 버튼을 눌러주세요</p></div>
 
    <div class="modal fade"  id="addcamera" tabindex="-1" role="dialog" aria-labelledby="addcameraLabel" aria-hidden="true">
        <div class="modal-dialog" role="document">
@@ -95,7 +98,7 @@
                    </button>
                </div>
 
-                   <form name="myForm" onsubmit="return createItem()" method="post">
+                   <form name="myForm" id = "createForm" method="post">
                        <div class="modal-body">
                        <div class="form-group">
                            <label for="formGroupExampleInput">닉네임</label>
@@ -142,7 +145,7 @@
                    </div>
                </div>
                <div class="modal-footer">
-                   <button type="button" class="btn btn-success" onclick="clearAll()">전체 삭제</button>
+                   <button type="button" id = "clearAll" class="btn btn-success">전체 삭제</button>
                </div>
            </div>
        </div>
@@ -162,12 +165,12 @@
             </div>
             <div class="modal-body" style="height: 50vw">
                 <div class="text-center" style=" float: left; width: 50%;">
-                    <button type="button"  class="box" data-toggle="modal" data-target="#help1"><img src="./images/안드로이드.png" style="width:80%; max-width: 760px; vertical-align: middle" alt="">
+                    <button type="button"  class="box" data-toggle="modal" data-target="#help1"><img src="https://raw.githubusercontent.com/cjm2021401/whave2.0/master/images/안드로이드.png" style="width:80%; max-width: 760px; vertical-align: middle" alt="">
                     </button>
                 </div>
 
                 <div class="text-center" style=" float: left; width: 50%;">
-                    <button type="button"  class="box" data-toggle="modal" data-target="#help2"><img src="./images/애플.png" style="width:80%; max-width: 760px; vertical-align: middle" alt="">
+                    <button type="button"  class="box" data-toggle="modal" data-target="#help2"><img src="https://raw.githubusercontent.com/cjm2021401/whave2.0/master/images/애플.png" style="width:80%; max-width: 760px; vertical-align: middle" alt="">
                     </button>
 
                 </div>
@@ -192,11 +195,6 @@
                 <!--Carousel Wrapper-->
                 <div id="android-2" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
                     <!--Indicators-->
-                    <ol class="carousel-indicators">
-                        <li data-target="#android-2" data-slide-to="0"></li>
-                        <li data-target="#android-2" data-slide-to="1"></li>
-                        <li data-target="#android-2" data-slide-to="2"></li>
-                    </ol>
                     <!--/.Indicators-->
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox" >
@@ -226,7 +224,7 @@
                     </div>
                     <!--/.Slides-->
                     <!--Controls-->
-                    <a class="carousel-control-prev" href="#android-2" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#android-2" role="button" data-slide="prev" style="color-adjust: #000000">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
@@ -256,11 +254,6 @@
                 <!--Carousel Wrapper-->
                 <div id="ios-1" class="carousel slide carousel-fade" data-interval="false" data-ride="carousel">
                     <!--Indicators-->
-                    <ol class="carousel-indicators">
-                        <li data-target="#ios-1" data-slide-to="0"></li>
-                        <li data-target="#ios-1" data-slide-to="1"></li>
-
-                    </ol>
                     <!--/.Indicators-->
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox" >
@@ -303,9 +296,6 @@
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/firebase-app.js"></script>
-    <script src="js/firebase-auth.js"></script>
-    <script src="js/firebase-firestore.js"></script>
     <script src="js/video.js"></script>
     <script src="js/videojs-http-streaming.js"></script>
     <script src="js/script.js"></script>

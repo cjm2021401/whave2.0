@@ -1,4 +1,14 @@
-function createItem() {
+document.getElementById("createForm").addEventListener("submit", createItem);
+document.getElementById("clearAll").addEventListener("click", clearAll);
+//document.getElementById("clearOne").addEventListener("click", function() { clearOne(this.parentNode.parentNode);} );
+
+
+function createItem(){
+    console.log('aaa');
+    whale.storage.sync.set({key: value}, function() {
+        console.log('Value is set to ' + value);
+    });
+
     var nickname = document.forms["myForm"]["fname"].value;
     if (nickname == "") {
         alert("카메라 이름을 입력하세요");
@@ -43,7 +53,6 @@ function clearAll() {
 
 function clearOne(idx){
 
-
     var arr = Array.from(idx.cells);
     var key = arr[0].innerHTML;
     localStorage.removeItem(key);
@@ -63,7 +72,7 @@ else{
         // use key name to retrieve the corresponding value
         var value = localStorage.getItem(key);
 
-        hst.innerHTML += "<tr><td>" + key + "</td><td>" + value + "</td><td><button onClick = clearOne(this.parentNode.parentNode)>삭제</button></td></tr>";
+        hst.innerHTML += "<tr><td>" + key + "</td><td>" + value + "</td><td></td></tr>";
     }}
 
 if(localStorage.length!=0) {
@@ -85,7 +94,7 @@ if(localStorage.length!=0) {
                         </div>
                     </div>
                 </div>`);
-        videojs(`video-${cam_no}`, {}, function() { this.reload(); });
+        videojs(`video-${cam_no}`, {}, function() { });
         cam_active = '';
         cam_no++;
     }

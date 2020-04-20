@@ -1,7 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "WHAVE 2.0",
-	"version": "2.0.0",
+	"version": "2.0.1",
+	"description": "안쓰는 스마트폰을 CCTV로 이용하여 사이드바에서 시청 가능한 어플리케이션입니다.",
 	"sidebar_action": {
 		"default_page": "index.html",
 		"default_icon": {

@@ -73,7 +73,7 @@
 
   - jQuery 3.1.1 (MIT)
 
-    
+  - Video.js 7.6.5 (Apache 2.0)
 
   ## 문의
 

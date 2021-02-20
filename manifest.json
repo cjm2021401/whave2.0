@@ -1,17 +1,17 @@
 {
-	"manifest_version": 2,
-	"name": "WHAVE 2.0",
-	"version": "2.1.0",
-	"description": "사용하지 않는 스마트폰을 CCTV로 이용하여 웨일 사이드바에서 시청 가능한 어플리케이션입니다.",
-	"sidebar_action": {
-		"default_page": "index.html",
-		"default_icon": {
-			"16": "images/main.png"
-		},
-		"default_title": "WHAVE"
-	},
-	"content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
-	"permissions": [
-		"storage"
-	]
+    "manifest_version": 2,
+    "name": "[PLACE_EXTENSION_NAME]",
+    "version": "2.1.0",
+    "description": "[PLACE_YOUR_DESCRIPTION]",
+    "sidebar_action": {
+        "default_page": "index.html",
+        "default_icon": {
+            "16": "images/main.png"
+        },
+        "default_title": "[PLACE_TITLE_NAME]"
+    },
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
+    "permissions": [
+        "storage"
+    ]
 }
